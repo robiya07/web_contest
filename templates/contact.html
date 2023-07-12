@@ -1,0 +1,38 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block content %}
+    <main>
+        <div class="container">
+            <div class="row justify-content-between">
+                <h1 class="kont">КОНТАКТЫ</h1>
+                <div class="col-4">
+                    <img src="{% static "main/img/contact.png" %}" alt="">
+                </div>
+                <div class="col-3">
+                    <img class="el" src="{% static "main/img/elogo.svg" %}" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="big">
+                        <div class="left">
+                            <img class="map" src="{% static "main/img/map.png" %}" alt="">
+                        </div>
+                        <div class="right">
+                            <h1 class="tat">КОНТАКТЫ</h1>
+                            <p class="long">Toshkent shaxri, Yunusobod tumani, O'zbekiston ko'chasi <br>
+                                +99897 123-45-67 <br>
+                                +99871 123-45-67 <br>
+                                email@befirst.com</p>
+                            <input class="inp1" type="text" placeholder="имя">
+                            <input class="inp1" type="text" placeholder="почта">
+                            <input class="inp2" type="text" placeholder="сообщения">
+                            <button class="btn8">ОТПРАВИТ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

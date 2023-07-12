@@ -1,0 +1,43 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block content %}
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="ard2">
+                        <div class="siz">
+                            <h1 class="kon2">ГАЛЛЕРЕЯ</h1>
+                            <p class="lor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor
+                                incididunt ut labore et ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididaliqua. </p>
+                        </div>
+                        <div class="nis">
+                            <input class="inp" type="text">
+                            <img class="pos" src="{% static "main/img/Shape.png" %}" alt="">
+                            <button class="btn4">СТАТИСТИКА ПО РЕГИОНАМ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-between">
+                    {% for work in works %}
+                        <div class="col-4">
+                            <div class="ward">
+                                <h1 class="w-text">{{ work.survey.name }}</h1>
+                                <img style="width: 100%;" src="{{ work.survey.file.url }}" alt="">
+                            </div>
+                        </div>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+            <br><br><br>
+        </div>
+    </main>
+{% endblock %}
+
+

@@ -1,0 +1,132 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block content %}
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="ard-login">
+                        <div class="siz">
+                            <h1 class="ank-title">ЛИЧНЫЙ КАБИНЕТ</h1>
+                            <p class="lor2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor
+                                incididunt ut labore et ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="ank-body px-5 pt-4">
+                    <h2 class="mb-5">Личные данные</h2>
+
+                    <form method="post" class="d-flex justify-content-center" action="{% url 'users:profile' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row col-12">
+                            <div class="col-4">
+                                <img src="{{ user_p.image.url }}"
+                                     style="background-color: #fcfcfd; width: 70%; object-fit: cover; height: 250px; margin-bottom: 3%">
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">Загрузить фото</label>
+                                    <input class="form-control" name="image" type="file" id="formFile"
+                                           style="width: 80%">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-check-label" for="female">
+                                        <img src="{% static "main/img/girl_check.png" %}"
+                                             style="width: 35%; margin-left: 20%;">
+                                    </label>
+                                    <label class="form-check-label" for="male">
+                                        <img src="{% static "main/img/boy_check.png" %}"
+                                             style="width: 35%; margin-left: -20%">
+                                    </label>
+
+                                </div>
+                                <div class="mb-3" style="margin-top: -1.5%">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" {% if user.gender == "female" %}checked{% endif %}
+                                               id="female" value="female" style="margin-left: 60%">
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" {% if user.gender == "male" %}checked{% endif %}
+                                               id="male" value="male" style="margin-left: 130%">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <input class="form-control form-control-lg mb-4" type="text"
+                                       value="{{ user.first_name }}"
+                                       placeholder="Имя" name="first_name">
+
+                                <input class="form-control form-control-lg mb-4" type="text"
+                                       value="{{ user.last_name }}"
+                                       placeholder="Фамилия" name="last_name">
+
+                                <div class="row">
+                                    <div class="input-group mb-3 input-group-lg mb-4" style="width: 70%;">
+                                        <span class="input-group-text" id="basic-addon1">@</span>
+                                        <input type="text" class="form-control" placeholder="Username"
+                                               value="{{ user.username }}"
+                                               aria-label="Имя пользователя"
+                                               aria-describedby="basic-addon1" name="username">
+                                    </div>
+                                    <div class="" style="width: 30%; height: 50px;">
+
+                                        <input type="date" class="form-control form-control-lg" id="birth_date"
+                                               name="birth_date" value={{ user.birth_date|date:"Y-m-d" }}>
+                                    </div>
+
+                                </div>
+
+                                <input class="form-control form-control-lg mb-4" type="text"
+                                       value="{{ user.address }}"
+                                       placeholder="Адрес" name="address">
+
+
+                                <select class="form-select form-select-lg mb-4" aria-label=".form-select-lg example"
+                                        name="school">
+                                    {% for org in organizations %}
+                                        <option value="{{ org.id }}" {% if user_p.organization == org %}
+                                                selected {% endif %}>{{ org.name }}</option>
+                                    {% endfor %}
+                                </select>
+                                <div class="row">
+                                    <input class="form-control form-control-lg mb-4" type="tel" name="phone"
+                                           placeholder="Телефон" value="{{ user.phone }}"
+                                           style="width: 47%; margin-left: 1.5%; margin-right: 3%">
+                                    <input class="form-control form-control-lg mb-4" type="email" name="email"
+                                           value="{{ user.email }}"
+                                           placeholder="Электронная почта" style="width: 47%">
+                                </div>
+
+
+                            </div>
+                            <div class="col-8 mt-3" style="border-top: 1px solid rgba(75,54,54,0.2)">
+                                <h4 class="mt-4">Изменить пароль</h4>
+                                <input type="password" id="inputPassword5" class="form-control mb-4"
+                                       name="current_password"
+                                       aria-labelledby="passwordHelpBlock" placeholder="Текуший пароль">
+                                <div class="row" style="margin-left: 0.1%">
+                                    <input type="password" id="inputPassword5" class="form-control" name="new_password"
+                                           aria-labelledby="passwordHelpBlock" placeholder="Новый пароль"
+                                           style="width: 48%; margin-right: 2.5%">
+                                    <input type="password" id="inputPassword5" class="form-control"
+                                           name="confirm_password"
+                                           aria-labelledby="passwordHelpBlock" placeholder="Подтвердите новый пароль"
+                                           style="width: 48%">
+                                </div>
+                            </div>
+
+                            <button class="btn-go"
+                                    style="width: 130px; margin-top: 20px; margin-bottom: 20px; margin-left: 45%"
+                                    type="submit">OK
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <br><br><br><br>
+        </div>
+    </main>
+{% endblock %}

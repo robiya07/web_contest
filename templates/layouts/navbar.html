@@ -1,0 +1,47 @@
+{% load static %}
+
+<header>
+    <nav class="nav">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-2">
+                    <div class="top">
+                        <div class="ll">
+                            <img src="{% static "main/img/flag.svg" %}" style="margin-top: 10px;" alt="">
+                        </div>
+                        <a href="{% url 'users:login' %}" class="regis">ВХОД</a>
+                        <a href="{% url 'users:registration' %}" class="regis">РЕГИСТРАЦИЯ</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="nav2">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="oo">
+                        <img class="logo" src="{% static "main/img/logo.svg" %}" alt="">
+                        <div class="pp">
+                            <img src="{% static "main/img/ser.png" %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <ul class="list">
+                        <li class="item"><a href="{% url "contest:home" %}">Главная</a></li>
+                        <li class="item"><a href="{% url "contest:contest_list" %}">Конкурсы</a></li>
+                        <li class="item"><a href="#">Правила</a></li>
+                        <li class="item"><a href="{% url "contest:results" %}">Результаты</a></li>
+                        <li class="item"><a href="{% url "survey:works_list" %}">Работы</a></li>
+                        <li class="item"><a href="{% url "contest:contact" %}">Контакты</a></li>
+                        <li class="item"><a href="{% url "contest:about" %}">О нас</a></li>
+                        <li class=" item"><a href="{% url 'users:profile' %}">Личный кабинет</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div style="background-color: #ffffff; height: 20px;"></div>
+</header>

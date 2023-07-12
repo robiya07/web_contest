@@ -1,0 +1,24 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        {% if success %}
+            <img src="{% static "main/img/confirm.jpg" %}" style="margin-left: 10%; object-fit: cover; width: 80%">
+            <p style="font-size: 40px; margin-top: 2%; margin-left: 27%;"><b>{{ user.username }}</b>,
+                ваш аккаунт подтвержден!</p>
+            <div class="d-flex justify-content-center" style="margin-bottom: 15%; margin-top: 3%">
+                <a type="button" href="{% url 'users:login' %}" class="btn btn-warning btn-lg px-4">Вход</a>
+            </div>
+
+        {% else %}
+            <img src="{% static "main/img/failed.jpg" %}" style="margin-left: 20%; object-fit: cover; width: 65%">
+            <p style="font-size: 40px; margin-top: 2%; margin-left: 27%; margin-bottom: 10%">Ошибка, недействительный
+                токен!</p>
+
+        {% endif %}
+
+    </div>
+{% endblock %}
+
+

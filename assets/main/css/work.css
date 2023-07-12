@@ -1,0 +1,221 @@
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*    list-style: none;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*body {*/
+/*    font-family: "Abel", sans-serif;*/
+/*    font-family: "Baloo 2", cursive;*/
+/*    font-family: "Inter", sans-serif;*/
+/*}*/
+
+/*.nav {*/
+/*    background-color: red;*/
+/*    height: 38px;*/
+/*}*/
+
+/*.top {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*}*/
+
+/*.regis {*/
+/*    cursor: pointer;*/
+/*    font-weight: 700;*/
+/*    font-size: 12px;*/
+/*    margin-top: 12px;*/
+/*    color: #848484;*/
+/*}*/
+
+/*.ll {*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.nav2 {*/
+/*    background-color: #F5C24D;*/
+/*    height: 110px;*/
+/*    padding-top: 8px;*/
+/*}*/
+
+/*.oo {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*}*/
+
+/*.pp {*/
+/*    margin-top: 30px;*/
+/*}*/
+
+/*.list {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    margin-top: 30px;*/
+/*}*/
+
+/*.item a {*/
+/*    text-decoration: none;*/
+/*    font-family: Inter;*/
+/*    font-weight: 700;*/
+/*    font-size: 14px;*/
+/*    color: #241f1f;*/
+/*    padding: 5px;*/
+/*}*/
+
+/*.item a:hover {*/
+/*    background-color: #EFEBE2;*/
+/*    border-radius: 15px;*/
+/*}*/
+
+/*!*-------------------------main start------------------------------------- *!*/
+/*main {*/
+/*    padding-top: 30px;*/
+/*    padding-bottom: 50px;*/
+/*    background: url(./img/ELEMENTLAR.png);*/
+
+/*}*/
+
+
+
+
+
+/*.siz {*/
+/*    width: 380px;*/
+/*    margin-left: 93px;*/
+/*    padding-top: 71px;*/
+/*}*/
+
+/*.lor {*/
+/*    font-weight: 400;*/
+/*    line-height: 22px;*/
+/*    font-size: 20px;*/
+/*    margin-bottom: 30px;*/
+/*}*/
+
+/*.btn1 {*/
+/*    font-weight: 400;*/
+/*    font-size: 16px;*/
+/*    text-align: center;*/
+/*    color: #FFFF;*/
+/*    width: 294px;*/
+/*    height: 38px;*/
+/*    background-color: #ED6059;*/
+/*    border: none;*/
+/*    border-radius: 20px;*/
+/*}*/
+
+/*.bard {*/
+/*    margin-top: 35px;*/
+/*    background-color: #ED6059;*/
+/*    border-radius: 15px;*/
+/*    box-shadow: rgb(85, 85, 85) 5px 5px 5px;*/
+/*}*/
+
+/*.va {*/
+/*    background-color: #ED6059 !important;*/
+/*}*/
+
+/*.isp {*/
+/*    margin-top: 9px;*/
+/*    margin-bottom: 6px;*/
+/*    margin-left: 15px;*/
+/*    font-weight: 800;*/
+/*    font-size: 18px;*/
+/*    color: #000000;*/
+/*}*/
+
+/*.lo {*/
+/*    font-size: 14px;*/
+/*    font-weight: 500;*/
+/*    color: #000000;*/
+/*    margin-left: 15px;*/
+/*}*/
+
+/*.btn2 {*/
+/*    margin-top: 25px;*/
+/*    font-weight: 400;*/
+/*    font-size: 9px;*/
+/*    color: #000000;*/
+/*    text-align: center;*/
+/*    width: 150px;*/
+/*    height: 30px;*/
+/*    border: none;*/
+/*    background-color: #F5C24D;*/
+/*    border-radius: 5px;*/
+/*    margin-left: 15px;*/
+/*    box-shadow: #000000 25%;*/
+/*    margin-bottom: 20px;*/
+/*    box-shadow: rgb(67, 67, 67) 3px 3px 3px;*/
+/*}*/
+
+/*.and {*/
+/*    background-color: #F5C24D;*/
+/*}*/
+
+/*.pic {*/
+/*    width: 100%;*/
+/*}*/
+
+/*.btn3 {*/
+/*    font-weight: 400;*/
+/*    font-size: 20px;*/
+/*    color: #FFFF;*/
+/*    width: 261px;*/
+/*    height: 73px;*/
+/*    background-color: #ED6059;*/
+/*    border: none;*/
+/*    margin-top: 85px;*/
+/*    border-radius: 10px;*/
+/*    margin-left: -60px;*/
+/*    box-shadow: #0c0c0c 3px 7px 13px;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*!*-------------------------------- main end----------------------------- *!*/
+/*footer {*/
+/*    background-color: #F5C24D;*/
+/*    height: 330px;*/
+/*    padding-top: 70px;*/
+/*}*/
+
+/*.karta {*/
+/*    font-weight: 500;*/
+/*    font-size: 22px;*/
+/*    border-color: #000000;*/
+/*}*/
+
+/*.it a {*/
+/*    text-decoration: none;*/
+/*    color: #263236;*/
+/*    font-weight: 400;*/
+/*    font-size: 18px;*/
+/*    line-height: 38px;*/
+/*}*/
+
+/*.log {*/
+/*    width: 146px;*/
+/*    height: 165px;*/
+/*    margin-top: 20px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.be {*/
+/*    font-weight: 400;*/
+/*    font-size: 18px;*/
+/*    color: #FFFF;*/
+/*    margin-top: 30px;*/
+/*    margin-left: 10px;*/
+/*    cursor: pointer;*/
+/*}*/

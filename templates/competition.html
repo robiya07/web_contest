@@ -1,0 +1,47 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block content %}
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="ard">
+                        <div class="siz">
+                            <h1 class="kon">КОНКУРСЫ</h1>
+                            <p class="lor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor
+                                incididunt ut labore et ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for contest in contests %}
+                    <div class="col-4 px-3">
+                        <div class="bard" style="background: {% cycle "#ED6059" "#F5C24D" %}">
+                            <img class="pic" src="{{ contest.image.url }}" alt="">
+
+                            <h3 class="isp">{{ contest.name }}</h3>
+                            <p class="lo">{{ contest.description|truncatechars:"100" }}</p>
+                            <a href="{% url "contest:contest_detail" contest.slug %}">
+                                <button class="btn2"
+                                        style="background-color: {% cycle "#F5C24D" "#ED6059" %}; margin-bottom: 10px;">
+                                    Читать дальше
+                                </button>
+                            </a>
+
+                        </div>
+                    </div>
+                {% endfor %}
+
+
+            </div>
+            <br><br><br><br>
+        </div>
+    </main>
+{% endblock %}
+

@@ -1,0 +1,55 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block content %}
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="ard-login">
+                        <div class="siz">
+                            <h1 class="ank-title">ЛИЧНЫЙ КАБИНЕТ</h1>
+                            <p class="lor2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor
+                                incididunt ut labore et ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="ank-body px-5 pt-4">
+                    <h2 class="mb-5">Заполните форму для входа в систему </h2>
+
+                    <form method="post" class="d-flex justify-content-center" action="{% url 'users:login' %}">
+                        {% csrf_token %}
+                        <div class="col-10">
+                            <div class="mb-3 mb-4">
+                                <label for="exampleFormControlInput1" class="form-label col-form-label-lg">Введите имя
+                                    пользователя:</label>
+                                <input class="form-control form-control-lg" type="text" name="username" placeholder="Имя пользователя"
+                                       aria-label="default input example">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputPassword5" class="form-label col-form-label-lg">Введите пароль:</label>
+                                <input type="password" id="inputPassword5" name="password" class="form-control form-control-lg"
+                                       aria-labelledby="passwordHelpBlock">
+                                <div id="passwordHelpBlock" class="form-text">
+                                    Ваш пароль должен состоять из 8-20 символов, содержать буквы и цифры и не должен
+                                    содержать пробелов, специальных символов или эмодзи.
+                                </div>
+                            </div>
+
+                            <button class="btn-go"
+                                    style="width: 130px; margin-top: 20px; margin-bottom: 20px; margin-left: 45%"
+                                    type="submit">OK
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+            <br><br><br><br>
+        </div>
+    </main>
+{% endblock %}

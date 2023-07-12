@@ -1,0 +1,52 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block content %}
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="ard-ank">
+                        <div class="siz">
+                            <h1 class="ank-title">УЧАСТИЕ В КОНКУРСЕ</h1>
+                            <p class="lor2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor
+                                incididunt ut labore et ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="ank-body px-5 pt-4">
+                    <h1>АНКЕТА</h1>
+                    <p class="zap">Заполните эту форму для участия в конкурсе "{{ contest.name }}"</p>
+                    <form action="{% url "survey:survey" contest.slug %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-3 mt-2">
+                            <label for="formFile" class="form-label">Загрузите готовую работу, подготовленную для этого
+                                конкурса (.jpeg, .png, .webp, .docs)</label>
+                            <input class="form-control" name="file" required type="file" id="formFile">
+
+                            <label for="forComment" class="form-label mt-4">Назовите свою работу:</label>
+                            <input class="form-control" name="name" id="formComment" type="text"
+                                      placeholder="например, Пришла весна">
+
+                            <label for="forComment" class="form-label mt-4">Оставьте ваш комментарий:</label>
+                            <textarea class="form-control" name="user_comment" id="formComment" style="height: 250px;"
+                                      placeholder="Комментарий..."></textarea>
+                        </div>
+                        <button class="btn-go" style="width: 130px; margin-top: 20px; margin-bottom: 20px;"
+                                type="submit">OK
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+            <br><br><br><br>
+        </div>
+    </main>
+{% endblock %}
+

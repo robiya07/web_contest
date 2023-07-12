@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "web-contest"
+version = "0.1.0"
+description = ""
+authors = ["robiya07 <obidjonova07@mail.ru>"]
+readme = "README.md"
+packages = [{include = "web_contest"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.2"
+django-cities-light = "^3.9.2"
+pillow = "^9.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

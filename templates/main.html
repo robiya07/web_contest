@@ -1,0 +1,26 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+    <main style="background: url('{% static "main/img/blue.png" %}'); background-repeat: no-repeat; background-size: cover;">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h1 class="megop">МЕРОПРИЯТИЯ ОБРАЗОВАТЕЛЬНОГО ПОРТАЛА</h1>
+                </div>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-6">
+                    <div class="ii">
+                        <img src="{% static "main/img/b-logo.svg" %}" alt="">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img class="boy_pic" src="{% static "main/img/boys.png" %}" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
+

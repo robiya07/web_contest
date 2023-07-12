@@ -1,0 +1,112 @@
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*    list-style: none;*/
+/*    text-decoration: none;*/
+/*  } wee                                                                                                                                                                                                                                                                                                                                                                                                                         x*/
+/*  body {*/
+/*    font-family: "Abel", sans-serif;*/
+/*    font-family: "Baloo 2", cursive;*/
+/*    font-family: "Inter", sans-serif;*/
+/*  }*/
+/*  .nav{*/
+/*      background-color: #D2D2D2;*/
+/*      height: 38px;*/
+/*  }*/
+/*  .top{*/
+/*      display: flex;*/
+/*      justify-content: space-between;*/
+/*  }*/
+/*  .regis{*/
+/*    cursor: pointer;*/
+/*      font-weight: 700;*/
+/*      font-size: 12px;*/
+/*      margin-top: 12px;*/
+/*      color: #848484;*/
+/*  }*/
+/*  .ll{*/
+/*    cursor: pointer;*/
+/*  }*/
+/*  .nav2{*/
+/*      background-color: #F5C24D;*/
+/*      height: 110px;*/
+/*      padding-top: 8px;*/
+/*  }*/
+/*  .oo{*/
+/*      display: flex;*/
+/*      justify-content: space-between;*/
+/*  }*/
+/*  .pp{*/
+/*      margin-top: 30px;*/
+/*  }*/
+/*  .list{*/
+/*      display: flex;*/
+/*      justify-content: space-between;*/
+/*      margin-top: 30px;*/
+/*  }*/
+/*  .item a{*/
+/*      text-decoration: none;*/
+/*      font-family: Inter;*/
+/*      font-weight: 700;*/
+/*      font-size: 14px;*/
+/*      color: #241f1f;*/
+/*      padding: 5px;*/
+/*  }*/
+/*  .item a:hover{*/
+/*      background-color: #EFEBE2;*/
+/*      border-radius: 15px;*/
+/*  }*/
+/*  !*-------------------------main start------------------------------------- *!*/
+/*main{*/
+/*    background: url(./img/ELEMENTLAR.png);*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
+
+
+
+
+
+
+/*hr{*/
+/*    color: #db9a00 !important;*/
+/*    height: 16px !important;*/
+/*    margin-top: 29px;*/
+/*    margin-bottom: 47px;*/
+/*}*/
+
+
+
+/*  !*-------------------------------- main end----------------------------- *!*/
+/*  footer{*/
+/*      background-color: #F5C24D;*/
+/*      height: 330px;  */
+/*      padding-top: 70px;*/
+/*  }*/
+/*  .karta{*/
+/*      font-weight: 500;*/
+/*      font-size: 22px;*/
+/*      border-color: #000000;*/
+/*  }*/
+/*  .it a{*/
+/*      text-decoration: none;*/
+/*      color: #263236;*/
+/*      font-weight: 400;*/
+/*      font-size: 18px;*/
+/*      line-height: 38px;*/
+/*  }*/
+/*  .log{*/
+/*      width: 146px;*/
+/*      height: 165px;*/
+/*      margin-top: 20px;*/
+/*      cursor: pointer;*/
+/*  }*/
+/*  .be{*/
+/*      font-weight: 400;*/
+/*      font-size: 18px;*/
+/*      color: #FFFF;*/
+/*      margin-top: 30px;*/
+/*      margin-left: 10px;*/
+/*      cursor: pointer;*/
+/*  }*/

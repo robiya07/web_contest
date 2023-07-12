@@ -1,0 +1,72 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block content %}
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="kon-img-container">
+                        <h2 class='text'>{{ contest.name }}</h2>
+                        <img class="kon-img kon-img-container" src="{{ contest.image.url }}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="kon-det my-5">
+                    <h3 class="kon-title">Добро пожаловать на конкурс "{{ contest.name }}" !</h3>
+                    <p class="kon-end">Начало конкурса: {{ contest.start_date }}</p>
+                    <h5>Описание конкурса:</h5>
+                    <p class="ms-2">
+                        {{ contest.description }}
+                    </p>
+                    <div class="my-4">
+                        <h5 class="mt-5">Правила:</h5>
+                        <div class="accordion mt-4" id="accordionExample">
+                            {% for rule in rules %}
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed rule" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#{{ rule.id }}" aria-expanded="false"
+                                                aria-controls="{{ rule.id }}">
+                                            {{ rule.name }}
+                                        </button>
+                                    </h2>
+                                    <div id="{{ rule.id }}" class="accordion-collapse collapse"
+                                         data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            {{ rule.description }}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <h5 class="mt-5 mb-3">Призы:</h5>
+                        <div class="row d-flex justify-content-center">
+                            {% for prize in prizes %}
+                                <div class="col-3" style="text-align: center; margin-bottom: 20px; margin-top: 10px;">
+                                    <img class="prize-img" src="{{ prize.image.url }}">
+                                    <h4 class="prize-title mt-2">{{ prize.name }}</h4>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <p class="kon-end">Завершение конкурса: {{ contest.start_date }}</p>
+                    <h2 class="prize-title">Участвуйте прямо сейчас!</h2>
+                    <div class="d-flex justify-content-center">
+                        <a href="{% url "survey:survey" contest.slug %}">
+                            <button class="btn-go my-3">Участвовать</button>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+{% endblock %}
